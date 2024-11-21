@@ -1,20 +1,21 @@
 #include <stdio.h>
 int main(){
 	
-    char original[30], reversed[30];
-    int i, length;
+    char orginal[30], reversed[30];
+    int i, j = 0; 
 
     printf("Enter original name: ");
-    scanf("%s", original); 
+    scanf("%s", original);
 
-    length = strlen(original);
-    
-    for (i = 0; i < length; i++) {
-        reversed[i] = original[length - 1 - i];
+    int length = strlen(original);
+
+    for (i = length - 1; i >= 0; i--) { 
+        reversed[j] = original[i];
+        j++; /
     }
-    reversed[length] = '\0';
+    reversed[j] = '\0';
 
-    printf("Reversed string: %s\n", reversed);
+    printf("Reversed string: %s", reversed);
 
     return 0;
 }
